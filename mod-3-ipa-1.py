@@ -96,7 +96,9 @@ def shift_by_letter(letter, letter_shift):
     letters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
 
     for i in range(26):
-        if letter==letters[i]:
+        if letter==" ":
+            return(" ")
+        elif letter==letters[i]:
             for letter_shift_number in range(26):
                 if letter_shift==letters[letter_shift_number]:
                     return(letters[(i+letter_shift_number)%26])
