@@ -55,6 +55,8 @@ def relationship_status(from_member, to_member, social_graph):
     
 #Question 2
 
+#2-Not Finished
+
 board1 = [
 ['X','X','O'],
 ['O','X','O'],
@@ -111,20 +113,20 @@ def tic_tac_toe(board):
     row = []
     combinations = []
     
-    #Get horizontal line combinations and add to combinations list
+    #Get horizontal line combinations and add to combinations list-Working
     for i in board:
         combinations.append(i)
-    
-    #Get first_diagonal line combinations 
+   
+    #Get first_diagonal line combinations-Working
     i = 0
     while i < len(board):
         first_diagonal.append(board[i][i])
         i+=1
     combinations.append(first_diagonal)
     
-    #Get second_diagonal line combinations
+    #Get second_diagonal line combinations-Working
     i=0
-    j=2
+    j = len(board) - 1
 
     while i < len(board):
         second_diagonal.append(board[i][j])
@@ -132,20 +134,20 @@ def tic_tac_toe(board):
         j-=1
     combinations.append(second_diagonal)
     
-    #Get vertical line combinations
+    #Get vertical line combinations-Working
     for i in board:
         row.extend(i)
     for i in range(len(board)):
         combinations.append(row[i::len(board)])
-        
+
     #After getting all combinations, output result
     if x_wins in combinations:
         winner_chicken_dinner = 'X'
     elif o_wins in combinations:
         winner_chicken_dinner = 'O'
     else:
-        winner_chicken_dinner = 'No winner'
-        
+        winner_chicken_dinner = 'NO WINNER'
+    
     return winner_chicken_dinner
 
 #Question 3
